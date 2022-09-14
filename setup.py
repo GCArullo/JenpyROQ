@@ -1,5 +1,9 @@
 #!/usr/bin/env python
 from setuptools import setup, find_packages
+from pathlib    import Path
+import re
+
+HERE = Path(__file__).parent
 
 def find_version(path, varname="__version__"):
     """Parse the version metadata variable in the given file.
