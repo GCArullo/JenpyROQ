@@ -142,8 +142,8 @@ if __name__ == '__main__':
                 sys.exit(0)
 
         # Initialise ROQ parameters and structures.
-        from . import JenpyROQ as roq
-        jenpyroq = roq.jenpyroq(config_pars, params_ranges, pool=pool)
+        from . import jenpyroq as roq
+        jenpyroq = roq.JenpyROQ(config_pars, params_ranges, pool=pool)
         freq  = jenpyroq.freq
         np.save(jenpyroq.outputdir+'/ROQ_data/full_frequencies.npy', freq)
 

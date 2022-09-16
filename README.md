@@ -48,7 +48,7 @@ Several diagnostic plots (basis parameters, frequency nodes, outliers and error 
 
 # Algorithm and code description
 
-The algorithm implements what described in the [PyROQ paper](https://arxiv.org/abs/2009.13812), but extended as to allow for a more flexible pre-basis construction (with user-defined inputs), an arbitrary number of enrichment cycles with arbitrary and variable tolerance thresholds.
+The algorithm implements what described in the [PyROQ paper](https://arxiv.org/abs/2009.13812), but extended to allow for a more flexible pre-basis construction (with user-defined inputs), an arbitrary number of enrichment cycles with arbitrary and variable tolerance thresholds.
 
 The code also speeds up the execution by parallelising wherever possible, implements a more strict parameters and input/output management, a largely increased use of code modularisation, defines generic waveform structures capable of interfacing modern python-based models, including machine learning-based ones.
 
