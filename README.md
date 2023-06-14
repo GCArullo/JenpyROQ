@@ -71,6 +71,8 @@ Specifically, if you intend to add a new set of parameters (following e.g. the a
 
 4. Regulate their usage in the waveform call e.g. [here](https://github.com/GCArullo/JenpyROQ/blob/2423ef8fffe14b2c996b3a6bfd36743b929f1bc4/JenpyROQ/waveform_wrappers.py#L316).
 
+This is it. Now, the parameter flags and training range can be passed to the configuration files identically to any other parameter, e.g. [here](https://github.com/GCArullo/JenpyROQ/blob/f7a1169c3cbb851bf930997a295e39ab9c08e7a2/config_files/Test_configs/config_test_MLGW-BNS.ini#L52).
+
 # Dependencies
 
 The package depends on standard Python libraries, except for: `numpy` for numeric computation, `h5py` for data storing and `matplotlib` for plotting. Moreover, if MPI-based parallelisation is requested, the package has an additional dependency on `mpi4py`.
