@@ -58,6 +58,20 @@ Additional models supported compared to the original version (which supports any
    * [`MLGW-BNS`](https://pypi.org/project/mlgw-bns/), an efficient machine learning version of the frequency-domain [`TEOBResumSPA`](https://arxiv.org/abs/2012.00027) model; 
    * [`NRPMw`](https://arxiv.org/abs/2205.09112), post-merger (including their hybridisation with EOB-inspirals) binary neutron star models, interfaced through [`bajes`](https://github.com/matteobreschi/bajes).
 
+## Adding a new parameter
+
+The parameters structure logic is: a default set of parameters (a combination of the masses) is always included in the training range. For each new set of parameters added (e.g. spins, or tides) a flag will control the activation of such set. Default values of the new set of parameters should be declared, together with activation rules mediating the usage of the new parameter and the interaction with other options.
+
+Specifically, if you intend to add a new set of parameters (following e.g. the appearance of the `'tides'` flag and `'lambda1'` parameter):
+
+1. Declare the flag activating the new set of parameters [here](https://github.com/GCArullo/JenpyROQ/blob/2423ef8fffe14b2c996b3a6bfd36743b929f1bc4/JenpyROQ/initialise.py#L262), and document the flag [here](https://github.com/GCArullo/JenpyROQ/blob/2423ef8fffe14b2c996b3a6bfd36743b929f1bc4/JenpyROQ/initialise.py#LL58C16-L58C21). Flag conventions are documented [here](https://github.com/GCArullo/JenpyROQ/blob/2423ef8fffe14b2c996b3a6bfd36743b929f1bc4/JenpyROQ/initialise.py#L29);
+
+2. Declare the activation rule of the new parameter [here](https://github.com/GCArullo/JenpyROQ/blob/2423ef8fffe14b2c996b3a6bfd36743b929f1bc4/JenpyROQ/initialise.py#L156), together with possible interaction with other options, e.g. [here](https://github.com/GCArullo/JenpyROQ/blob/2423ef8fffe14b2c996b3a6bfd36743b929f1bc4/JenpyROQ/initialise.py#L138); 
+
+3. Document the new parameters [here](https://github.com/GCArullo/JenpyROQ/blob/2423ef8fffe14b2c996b3a6bfd36743b929f1bc4/JenpyROQ/initialise.py#L119), and declare their default and test values [here](https://github.com/GCArullo/JenpyROQ/blob/2423ef8fffe14b2c996b3a6bfd36743b929f1bc4/JenpyROQ/initialise.py#L192);
+
+4. Regulate their usage in the waveform call e.g. [here](https://github.com/GCArullo/JenpyROQ/blob/2423ef8fffe14b2c996b3a6bfd36743b929f1bc4/JenpyROQ/waveform_wrappers.py#L316).
+
 # Dependencies
 
 The package depends on standard Python libraries, except for: `numpy` for numeric computation, `h5py` for data storing and `matplotlib` for plotting. Moreover, if MPI-based parallelisation is requested, the package has an additional dependency on `mpi4py`.
