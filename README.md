@@ -66,9 +66,9 @@ Specifically, if you intend to add a new set of parameters (following e.g. the a
 
 1. Declare the flag activating the new set of parameters [here](https://github.com/GCArullo/JenpyROQ/blob/2423ef8fffe14b2c996b3a6bfd36743b929f1bc4/JenpyROQ/initialise.py#L262), and document the flag [here](https://github.com/GCArullo/JenpyROQ/blob/2423ef8fffe14b2c996b3a6bfd36743b929f1bc4/JenpyROQ/initialise.py#LL58C16-L58C21). Flag conventions are documented [here](https://github.com/GCArullo/JenpyROQ/blob/2423ef8fffe14b2c996b3a6bfd36743b929f1bc4/JenpyROQ/initialise.py#L29);
 
-2. Declare the activation rule of the new parameter [here](https://github.com/GCArullo/JenpyROQ/blob/2423ef8fffe14b2c996b3a6bfd36743b929f1bc4/JenpyROQ/initialise.py#L156), together with possible interaction with other options, e.g. [here](https://github.com/GCArullo/JenpyROQ/blob/2423ef8fffe14b2c996b3a6bfd36743b929f1bc4/JenpyROQ/initialise.py#L138); 
+2. Document the new parameters [here](https://github.com/GCArullo/JenpyROQ/blob/2423ef8fffe14b2c996b3a6bfd36743b929f1bc4/JenpyROQ/initialise.py#L119), and declare their default and test values [here](https://github.com/GCArullo/JenpyROQ/blob/2423ef8fffe14b2c996b3a6bfd36743b929f1bc4/JenpyROQ/initialise.py#L192);
 
-3. Document the new parameters [here](https://github.com/GCArullo/JenpyROQ/blob/2423ef8fffe14b2c996b3a6bfd36743b929f1bc4/JenpyROQ/initialise.py#L119), and declare their default and test values [here](https://github.com/GCArullo/JenpyROQ/blob/2423ef8fffe14b2c996b3a6bfd36743b929f1bc4/JenpyROQ/initialise.py#L192);
+3. Declare the activation rule of the new parameter [here](https://github.com/GCArullo/JenpyROQ/blob/2423ef8fffe14b2c996b3a6bfd36743b929f1bc4/JenpyROQ/initialise.py#L156), together with possible interaction with other options, e.g. [here](https://github.com/GCArullo/JenpyROQ/blob/2423ef8fffe14b2c996b3a6bfd36743b929f1bc4/JenpyROQ/initialise.py#L138); 
 
 4. Regulate their usage in the waveform call e.g. [here](https://github.com/GCArullo/JenpyROQ/blob/2423ef8fffe14b2c996b3a6bfd36743b929f1bc4/JenpyROQ/waveform_wrappers.py#L316).
 
