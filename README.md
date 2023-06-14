@@ -35,7 +35,6 @@ For MPI-based parallelisation, the run command should additionally be modified a
 Where `NTASKS` corresponds to the requested number of parallel tasks. 
 Moreover, the config file should specify the related flag `parallel=2`  and `n-processes` should correspond to NTASKS.  
 
-
 # Output
 
 The run directory will automatically contain a copy of the configuration file, git information and the screen output, stored under `JenpyROQ.log`.
