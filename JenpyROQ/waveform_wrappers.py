@@ -218,6 +218,10 @@ try:
             if 'ecc' not in p.keys(): p['ecc'] = 0.
             if(abs(p['ecc']) > 1e-12): raise ValueError("Eccentricity is not supported, but eccentricity={} was passed.".format(p['ecc']))
             
+            # convert naming from bajes to TEOB for dynamics pars
+            if 'TEOBResumS_a6c'   in p.keys(): p['a6c']   = p['TEOBResumS_a6c']    
+            if 'TEOBResumS_cN3LO' in p.keys(): p['cN3LO'] = p['TEOBResumS_cN3LO']
+
             # Impose the correct convention on masses
             if q < 1. :
                m1,m2           = m2,m1
