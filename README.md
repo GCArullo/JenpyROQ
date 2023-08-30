@@ -2,7 +2,42 @@
 This repository implements an extended, modularised and streamlined version of the PyROQ code (see below for a detailed list of changes), forked in March 2022 from its [original repository](https://github.com/qihongcat/PyROQ) and developed at the Theoretisch-Physikalisches Institut of the Friedrich-Schiller-Universität Jena. 
 
 Older history is available in [this fork](https://github.com/bernuzzi/PyROQ/tree/master/PyROQ).
-Please cite the [PyROQ paper](https://arxiv.org/abs/2009.13812) and the COMING SOON paper if you use this code in your research. 
+If you use this code in your research, please cite the PyROQ paper:
+
+  ```
+    @article{Qi:2020lfr,
+    author = "Qi, Hong and Raymond, Vivien",
+    title = "{Python-based reduced order quadrature building code for fast gravitational wave inference}",
+    eprint = "2009.13812",
+    archivePrefix = "arXiv",
+    primaryClass = "gr-qc",
+    reportNumber = "LIGO P2000367",
+    doi = "10.1103/PhysRevD.104.063031",
+    journal = "Phys. Rev. D",
+    volume = "104",
+    number = "6",
+    pages = "063031",
+    year = "2021"
+    }
+  ```
+
+and our paper where JenpyROQ was introduced:
+
+  ```
+    @article{Tissino:2022thn,
+    author = "Tissino, Jacopo and Carullo, Gregorio and Breschi, Matteo and Gamba, Rossella and Schmidt, Stefano and Bernuzzi, Sebastiano",
+    title = "{Combining effective-one-body accuracy and reduced-order-quadrature speed for binary neutron star merger parameter estimation with machine learning}",
+    eprint = "2210.15684",
+    archivePrefix = "arXiv",
+    primaryClass = "gr-qc",
+    doi = "10.1103/PhysRevD.107.084037",
+    journal = "Phys. Rev. D",
+    volume = "107",
+    number = "8",
+    pages = "084037",
+    year = "2023"
+    }
+  ```
 
 # Installation and usage
 
