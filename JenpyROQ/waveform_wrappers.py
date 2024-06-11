@@ -15,7 +15,7 @@ __non_lal_approx_names__ = ['teobresums-giotto',    'mlgw-bns', 'mlgw-bns-standa
 WfWrapper = {} # collect all the wvf wrappers
 
 # ------------------------------------------------------- #
-# Example of waveform wrapper for PyROQ                   #
+# Example of waveform wrapper for JenpyROQ                #
 # A wrapper must be a class with these attributes/methods #
 # ------------------------------------------------------- #
 
@@ -186,7 +186,7 @@ try:
             Fourier transform of TD wfv
             """
             
-            hptilde = np.fft.rfft(hp) * dt 
+            hptilde = np.fft.rfft( hp) * dt 
             hctilde = np.fft.rfft(-hc) * dt
             
             return hptilde, hctilde
@@ -320,7 +320,7 @@ try:
             lambda1,lambda2 = 0.,0.
             if 'lambda1' in p.keys(): lambda1 = p['lambda1']
             if 'lambda2' in p.keys(): lambda2 = p['lambda2']
-            if((abs(lambda1) < 5.) or (abs(lambda2) < 5.)):       raise ValueError("lambdas>5 but ({},{}) were passed.".format(lambda1, lambda2))
+            if((abs(lambda1) < 5.   ) or (abs(lambda2) < 5.   )): raise ValueError("lambdas>5 but ({},{}) were passed.".format(lambda1, lambda2))
             if((abs(lambda1) > 5000.) or (abs(lambda2) > 5000.)): raise ValueError("lambdas<5000 but ({},{}) were passed.".format(lambda1, lambda2))
 
             if 'ecc' not in p.keys(): p['ecc'] = 0.
@@ -351,8 +351,7 @@ try:
             return hp, hc
 
     # Add a wrapper for each approximant
-    for a in approximants:
-        WfWrapper[a] = WfMLGW
+    for a in approximants: WfWrapper[a] = WfMLGW
 
 except ModuleNotFoundError: print('\nWarning: `mlgw-bns module` not found.\n')
 
