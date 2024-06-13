@@ -1,5 +1,5 @@
 # JenpyROQ
-This repository implements an extended, modularised and streamlined version of the PyROQ code (see below for a detailed list of changes), forked in March 2022 from its [original repository](https://github.com/qihongcat/PyROQ) and developed at the Theoretisch-Physikalisches Institut of the Friedrich-Schiller-Universität Jena. 
+This repository implements an extended, modularised and streamlined version of the PyROQ code (see below for a detailed list of changes), forked in March 2022 from its [original repository](https://github.com/qihongcat/PyROQ) and initially developed at the Theoretisch-Physikalisches Institut of the Friedrich-Schiller-Universität Jena. 
 
 Older history is available in [this fork](https://github.com/bernuzzi/PyROQ/tree/master/PyROQ).
 If you use this code in your research, please cite the PyROQ paper:
@@ -58,7 +58,7 @@ A simple example can be run by:
 
     python -m JenpyROQ --config-file config_files/Test_configs/test_config_IMRPv2.ini
 
-Other examples are available in the `config_files` directory, see the relative [README file](https://github.com/bernuzzi/PyROQ/blob/master/config_files/Test_configs/README.md).
+Other examples are available in the `config_files` directory, see the relative [README file](https://github.com/GCArullo/JenpyROQ/blob/main/config_files/Test_configs/README.md).
 
 ## MPI parallelisation
 
