@@ -6,7 +6,3 @@ Older history is available in [this fork](https://github.com/bernuzzi/PyROQ/tree
 # Documentation
 
 Documentation is available at: [JenpyROQ documentation](https://gcarullo.github.io/JenpyROQ/).
-
-Local documentation build instructions are in [docs/README.md](docs/README.md).
-
-Development history is tracked in [DEVELOPMENT_HISTORY.md](DEVELOPMENT_HISTORY.md).
