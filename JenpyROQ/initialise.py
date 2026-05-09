@@ -21,8 +21,8 @@ def store_git_info(output):
     return
 
 #Description of the package. Printed on stdout if --help option is give.
-usage="""\n\n python -m PyROQ --config-file config.ini\n
-Package description FIXME.
+usage="""\n\n python -m JenpyROQ --config-file config.ini\n
+Construct reduced order quadrature bases and empirical interpolation nodes for gravitational-wave waveform models.
 
 Options syntax: type, default values and sections of the configuration
 file where each parameter should be passed are declared below.
@@ -46,14 +46,14 @@ to be intended as part of the default value.
        * Parameters to be passed to the [Parallel] section.                     *
        **************************************************************************
 
-               parallel                Option to activate parallelisation. Allowed values: [0, 1, 2] corrsponding to [serial, multiprocessing, MPI]. Default: 0.
+               parallel                Option to activate parallelisation. Allowed values: [0, 1, 2] corresponding to [serial, multiprocessing, MPI]. Default: 0.
                n-processes             Number of processes on which the parallelisation is carried on. Default: 4.
        
        **************************************************************************
        * Parameters to be passed to the [Waveform_and_parametrisation] section. *
        **************************************************************************
 
-               approximant             Waveform approximant. Allowed values: ['teobresums-giotto', 'mlgw-bns-standalone', 'mlgw-bns' (called through bajes), 'nrpmw', 'nrpmw-recal', 'nrpmw-merger', 'nrpmw-recal-merger', 'teobresums-spa-nrpmw', 'teobresums-spa-nrpmw-recal', 'mlgw-bns-nrpmw', 'mlgw-bns-nrpmw-recal','IMRPhenomPv2', 'IMRPhenomPv3', 'IMRPhenomXHM', 'IMRPhenomXPHM', 'TaylorF2Ecc', 'IMRPhenomPv2_NRTidal', 'IMRPhenomNSBH']. Default: 'teobresums-giotto'.
+               approximant             Waveform approximant. Allowed values depend on optional waveform dependencies. Supported names in the source are ['teobresums-giotto', 'mlgw-bns-standalone', 'mlgw-bns' (called through bajes), 'nrpmw', 'nrpmw-recal', 'nrpmw-merger', 'nrpmw-recal-merger', 'teobresums-spa-nrpmw', 'teobresums-spa-nrpmw-recal', 'mlgw-bns-nrpmw', 'mlgw-bns-nrpmw-recal', 'IMRPhenomD', 'IMRPhenomPv2', 'IMRPhenomPv3', 'IMRPhenomPv3HM', 'IMRPhenomXHM', 'IMRPhenomXPHM', 'TaylorF2Ecc', 'IMRPhenomPv2_NRTidal', 'IMRPhenomNSBH']. Default: 'teobresums-giotto'.
                spins                   Option to select spin degrees of freedom. Allowed values: ['no-spins', 'aligned', 'precessing']. Default: 'aligned'.
                tides                   Flag to activate tides training. Default: 0.
                eccentricity            Flag to activate eccentricity training. Default: 0.
@@ -63,8 +63,8 @@ to be intended as part of the default value.
                m-q-par                 Flag to activate parametrisation in total mass and mass ratio. Default: 0.
                spin-sph                Flag to activate parametrisation in spins spherical components. Default: 0.
                f-min                   Minimum of the frequency axis on which the interpolant will be constructed. Default: 20.
-               f-max                   Maximum of the frequency axis on which the interpolant will be constructed. Default: 1024.
-               seglen                  Inverse of the step of the frequency axis on which the interpolant will be constructed. Default: 4.0.
+               f-max                   Maximum of the frequency axis on which the interpolant will be constructed. Default: 2048.
+               seglen                  Inverse of the step of the frequency axis on which the interpolant will be constructed. Default: 128.0.
 
        **************************************************************************
        * Parameters to be passed to the [ROQ] section.                          *
@@ -82,14 +82,14 @@ to be intended as part of the default value.
                tolerance-pre-basis-lin Basis projection error threshold for linear basis elements. Default: 1e-8.
                tolerance-pre-basis-qua Same as above, for quadratic basis. Default: 1e-10.
                n-pre-basis-lin         Total number (including corner elements) of basis elements to be constructed in the pre-selection loop for the linear case, before starting the cycles of basis enrichments over training sets. Cannot be smaller than 2 (number of `corner waveforms`). If larger than 2, overrides `tolerance-pre-basis`. Default 80.
-               n-pre-basis-qua         Total number (including corner elements) of basis elements to be constructed in the pre-selection loop for the quadratic case, before starting the cycles of basis enrichments over training sets. Cannot be smaller than 2 (number of `corner waveforms`). If larger than 2, overrides `tolerance-pre-basis`. Default 80.
+               n-pre-basis-qua         Total number (including corner elements) of basis elements to be constructed in the pre-selection loop for the quadratic case, before starting the cycles of basis enrichments over training sets. Cannot be smaller than 2 (number of `corner waveforms`). If larger than 2, overrides `tolerance-pre-basis`. Default 5.
 
                n-pre-basis-search-iter Number of points for each search of a new basis element during basis construction. Typical values: 30-100 for testing; 300-2000 for production. Typically roughly comparable to the number of basis elements. Depends on complexity of waveform features, parameter space and signal length. Increasing it slows down offline construction time, but decreases number of basis elements. Default: 80.
            
                n-training-set-cycles   Number of basis enrichment cycles, each using `training-set-sizes` number of training elements, and stopping until `training-set-n-outliers` are below `training-set-rel-tol` Default: 4.
                training-set-sizes      List (in string-format) of sizes of the training set for each basis enrichment cycles. Default: '10000,100000,1000000,10000000'.
-               training-set-n-outliers List (in string-format) of number of tolerated outliers for each basis enrichment cycles. Default: '10000,100000,1000000,10000000'.Default: '20,20,1,0'.
-               training-set-rel-tol    List (in string-format) of relative tolerance (e.g. tolerance = `tolerance-lin` * `training-set-rel-tol`) of the training set for each basis enrichment cycles. Default: '10000,100000,1000000,10000000'.Default: '0.1,0.1,0.05,0.3,1.0'.
+               training-set-n-outliers List (in string-format) of number of tolerated outliers for each basis enrichment cycles. Default: '20,20,1,0'.
+               training-set-rel-tol    List (in string-format) of relative tolerance (e.g. tolerance = `tolerance-lin` * `training-set-rel-tol`) of the training set for each basis enrichment cycles. Default: '0.1,0.1,0.05,0.3,1.0'.
                
                tolerance-lin           Interpolation error threshold for linear basis elements. Default: 1e-8.
                tolerance-qua           Same as above, for quadratic basis. Default: 1e-10.

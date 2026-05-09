@@ -17,7 +17,8 @@ logger = logging.getLogger(__name__)
 # Inizialize error handlers
 TermError    = ValueError('Unknown basis term requested.')
 VersionError = ValueError('Unknown version requested.')
-warnings.filterwarnings('ignore', category=np.VisibleDeprecationWarning)
+VisibleDeprecationWarning = getattr(np, 'VisibleDeprecationWarning', DeprecationWarning)
+warnings.filterwarnings('ignore', category=VisibleDeprecationWarning)
 
 # ROQ main
 class JenpyROQ:

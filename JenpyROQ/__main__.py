@@ -15,7 +15,8 @@ from . import initialise, post_processing
 import logging
 
 # Inizialize error handlers
-warnings.filterwarnings('ignore', category=np.VisibleDeprecationWarning)
+VisibleDeprecationWarning = getattr(np, 'VisibleDeprecationWarning', DeprecationWarning)
+warnings.filterwarnings('ignore', category=VisibleDeprecationWarning)
 
 # Logger setter
 def set_logger(label=None, outdir=None, level='INFO', verbose=True):
@@ -48,7 +49,7 @@ def set_logger(label=None, outdir=None, level='INFO', verbose=True):
 
     return logger
 
-if __name__ == '__main__':
+def main():
 
     # Initialise and read config.
     parser      = OptionParser(initialise.usage)
@@ -208,3 +209,7 @@ if __name__ == '__main__':
 
     # Show plots, if requested.
     if(config_pars['I/O']['show-plots']): plt.show()
+
+
+if __name__ == '__main__':
+    main()

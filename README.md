@@ -44,28 +44,51 @@ and our paper where JenpyROQ was introduced:
 Starting from the `JenpyROQ` location, 
 the package can be installed using the command:
 
-    python setup.py install
+    python -m pip install .
+
+For an editable development install, use:
+
+    python -m pip install -e .
+
+The package version is resolved dynamically from git metadata with
+`setuptools_scm`, following the current pyRing packaging pattern.
 
 Once  `JenpyROQ` is  installed, it is possible to construct an ROQ approximant through a configuration file and running the main routine of the package:
+
+    JenpyROQ --config-file config.ini
+
+The module form is equivalent:
 
     python -m JenpyROQ --config-file config.ini
 
 The user can see the full list of options at:
 
-    python -m JenpyROQ --help
+    JenpyROQ --help
 
 A simple example can be run by:
 
-    python -m JenpyROQ --config-file config_files/Test_configs/test_config_IMRPv2.ini
+    JenpyROQ --config-file config_files/Test_configs/config_test_IMRPv2.ini
 
 Other examples are available in the `config_files` directory, see the relative [README file](https://github.com/GCArullo/JenpyROQ/blob/main/config_files/Test_configs/README.md).
+
+# Documentation
+
+The Sphinx documentation lives under `docs/`. To build it locally, install the
+documentation requirements and run:
+
+    python -m pip install .[docs]
+    sphinx-build -b html docs docs/_build/html
+
+The documentation covers installation, configuration files, waveform wrappers,
+the ROQ construction workflow, output products, diagnostics and development
+extension points.
 
 ## MPI parallelisation
 
 Parallelisation options are described under the `[Parallel]` section of the help message.
 For MPI-based parallelisation, the run command should additionally be modified as follows:
     
-    mpiexec -n NTASKS python -m JenpyROQ --config-file config_files/Test_configs/test_config_IMRPv2.ini
+    mpiexec -n NTASKS JenpyROQ --config-file config_files/Test_configs/config_test_IMRPv2.ini
     
 Where `NTASKS` corresponds to the requested number of parallel tasks. 
 Moreover, the config file should specify the related flag `parallel=2`  and `n-processes` should correspond to NTASKS.  
