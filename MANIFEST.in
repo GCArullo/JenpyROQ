@@ -1,0 +1,9 @@
+include LICENSE
+include MANIFEST.in
+include README.md
+include pyproject.toml
+include requirements.txt
+include pypi_description.rst
+recursive-include config_files *.ini *.md
+recursive-include docs *.rst *.txt *.svg *.css Makefile make.bat
+recursive-include scripts *.py *.md

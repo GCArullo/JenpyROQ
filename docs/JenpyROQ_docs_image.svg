@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="780" height="220" viewBox="0 0 780 220" role="img" aria-labelledby="title desc">
+  <title id="title">JenpyROQ documentation logo</title>
+  <desc id="desc">Stylised reduced order quadrature basis and empirical nodes.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#0b5f6a"/>
+      <stop offset="0.58" stop-color="#172331"/>
+      <stop offset="1" stop-color="#9a5b12"/>
+    </linearGradient>
+    <linearGradient id="wave" x1="0" x2="1" y1="0" y2="0">
+      <stop offset="0" stop-color="#ffffff"/>
+      <stop offset="1" stop-color="#7ee2e7"/>
+    </linearGradient>
+  </defs>
+  <rect width="780" height="220" rx="18" fill="url(#bg)"/>
+  <path d="M42 142 C86 54 126 53 165 132 S245 168 286 93 S370 68 417 139 S508 167 552 92 S640 60 738 131" fill="none" stroke="url(#wave)" stroke-width="9" stroke-linecap="round"/>
+  <path d="M42 158 C86 92 129 95 171 151 S251 179 293 123 S371 103 417 157 S508 184 553 121 S642 96 738 153" fill="none" stroke="#f4bd62" stroke-width="4" stroke-linecap="round" opacity="0.9"/>
+  <g fill="#ffffff" stroke="#102331" stroke-width="3">
+    <circle cx="112" cy="79" r="10"/>
+    <circle cx="218" cy="161" r="10"/>
+    <circle cx="335" cy="91" r="10"/>
+    <circle cx="462" cy="165" r="10"/>
+    <circle cx="604" cy="75" r="10"/>
+    <circle cx="703" cy="116" r="10"/>
+  </g>
+  <text x="44" y="65" fill="#ffffff" font-family="Lato, Helvetica, Arial, sans-serif" font-size="40" font-weight="800">JenpyROQ</text>
+  <text x="46" y="99" fill="#d6eef1" font-family="Lato, Helvetica, Arial, sans-serif" font-size="19" font-weight="700">reduced order quadrature bases for gravitational-wave inference</text>
+</svg>

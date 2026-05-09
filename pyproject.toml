@@ -1,0 +1,44 @@
+[project]
+requires-python = ">=3.10"
+name = "JenpyROQ"
+description = "Construct reduced order quadrature bases and interpolants for gravitational-wave data analysis."
+dynamic = ["version", "readme"]
+dependencies = [
+    "h5py",
+    "matplotlib",
+    "numpy",
+    "seaborn",
+]
+authors = [
+    {name = "Gregorio Carullo", email = "gregorio.carullo@ligo.org"},
+    {name = "Sebastiano Bernuzzi"},
+    {name = "Matteo Breschi"},
+    {name = "Jacopo Tissino"},
+]
+license = {text = "MIT"}
+
+[project.urls]
+Repository = "https://github.com/GCArullo/JenpyROQ"
+Documentation = "https://github.com/GCArullo/JenpyROQ/tree/main/docs"
+
+[project.scripts]
+JenpyROQ = "JenpyROQ.__main__:main"
+
+[project.optional-dependencies]
+docs = [
+    "sphinx==7.2.6",
+    "sphinx-rtd-theme==2.0.0",
+    "docutils==0.20.1",
+]
+mpi = [
+    "mpi4py",
+]
+
+[build-system]
+requires = ["setuptools>=60", "setuptools_scm>=8.0"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools_scm]
+
+[bdist_wheel]
+universal = 1
