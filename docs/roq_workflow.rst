@@ -15,40 +15,6 @@ main construction and validates both plus and cross polarisations.
    Schematic view of the ROQ construction path from configuration to stored
    arrays and validation plots.
 
-High-Level Flow
-~~~~~~~~~~~~~~~
-
-.. code-block:: text
-
-   read configuration and create output directories
-                  |
-                  v
-   initialise serial, multiprocessing or MPI pool
-                  |
-                  v
-   seed pseudo-random generators
-                  |
-                  v
-   build full frequency grid from f-min, f-max and seglen
-                  |
-                  v
-   map active training parameters to vector indices
-                  |
-                  v
-   construct or load a pre-selection basis
-                  |
-                  v
-   run one or more enrichment cycles over random training sets
-                  |
-                  v
-   compute empirical nodes and basis interpolant
-                  |
-                  v
-   write ROQ arrays, metadata and diagnostic plots
-                  |
-                  v
-   validate interpolation error on random test points
-
 Inner Product And Normalisation
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
