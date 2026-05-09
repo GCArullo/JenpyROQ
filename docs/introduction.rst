@@ -1,6 +1,14 @@
 Introduction
 ------------
 
+.. |doi-pyroq| raw:: html
+
+   <a class="resource-chip doi-chip" href="https://doi.org/10.1103/PhysRevD.104.063031"><span class="resource-mark">DOI</span><span>10.1103/PhysRevD.104.063031</span></a>
+
+.. |doi-jenpyroq| raw:: html
+
+   <a class="resource-chip doi-chip" href="https://doi.org/10.1103/PhysRevD.107.084037"><span class="resource-mark">DOI</span><span>10.1103/PhysRevD.107.084037</span></a>
+
 ``JenpyROQ`` builds frequency-domain reduced order quadrature data for fast
 parameter estimation. The code samples a user-defined waveform parameter
 space, constructs reduced bases for the linear and quadratic waveform terms,
@@ -10,7 +18,7 @@ inference codes.
 Core References
 ~~~~~~~~~~~~~~~
 
-The original algorithmic reference for the project is the ``PyROQ`` paper:
+The original algorithmic reference for the project is the ``PyROQ`` paper |doi-pyroq|:
 
 .. code-block:: bibtex
 
@@ -46,7 +54,7 @@ The paper introducing the ``JenpyROQ`` extensions is:
      year = "2023"
    }
 
-We defer to this paper for details on the implemented algorithm and pointers
+We defer to this paper |doi-jenpyroq| for details on the implemented algorithm and pointers
 to the literature.
 
 External libraries

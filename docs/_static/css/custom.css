@@ -444,6 +444,11 @@ a:hover,
   color: var(--resource-hover-text) !important;
 }
 
+.doi-chip {
+  margin: 0 0.18rem;
+  vertical-align: middle;
+}
+
 .resource-mark {
   background: var(--resource-mark-bg);
   border-radius: 4px;

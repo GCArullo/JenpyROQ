@@ -9,7 +9,7 @@ sys.path.insert(0, repo_root)
 import JenpyROQ
 
 project = "JenpyROQ"
-copyright = "2022 onwards, Gregorio Carullo, Sebastiano Bernuzzi, Matteo Breschi, Jacopo Tissino"
+copyright = "2022 onwards, Gregorio Carullo, Sebastiano Bernuzzi, Matteo Breschi"
 author = "Gregorio Carullo, Sebastiano Bernuzzi, Matteo Breschi, Jacopo Tissino"
 
 extensions = [
