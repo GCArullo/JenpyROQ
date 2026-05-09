@@ -4,7 +4,8 @@ Install & Run
 Install From Source
 ~~~~~~~~~~~~~~~~~~~
 
-Starting from the repository root, install the package with:
+Starting from the `repository root <https://github.com/GCArullo/JenpyROQ>`__,
+install the package with:
 
 .. code-block:: bash
 

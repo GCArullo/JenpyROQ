@@ -198,6 +198,13 @@ a:hover,
   display: none;
 }
 
+.rst-content .wy-breadcrumbs .breadcrumb-separator {
+  color: var(--jenpyroq-muted);
+  display: inline-block;
+  font-weight: 800;
+  margin: 0 0.45rem;
+}
+
 .rst-content .wy-breadcrumbs .wy-breadcrumbs-aside {
   float: right;
 }
