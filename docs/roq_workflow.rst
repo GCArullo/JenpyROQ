@@ -6,6 +6,15 @@ one or two bases depending on ``basis-lin`` and ``basis-qua``. The linear run
 uses the plus polarisation ``h_+``. The quadratic run uses ``|h_+|^2`` in the
 main construction and validates both plus and cross polarisations.
 
+.. rst-class:: jenpyroq-doc-figure-container
+
+.. figure:: _static/jenpyroq_roq_workflow.svg
+   :alt: Diagram of the JenpyROQ ROQ construction workflow.
+   :class: jenpyroq-doc-figure
+
+   Schematic view of the ROQ construction path from configuration to stored
+   arrays and validation plots.
+
 High-Level Flow
 ~~~~~~~~~~~~~~~
 

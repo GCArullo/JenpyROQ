@@ -4,26 +4,24 @@ Outputs & Diagnostics
 Each run writes enough metadata to inspect the construction afterwards. The
 most important files are under ``ROQ_data`` and ``Plots``.
 
+.. rst-class:: jenpyroq-doc-figure-container
+
+.. figure:: _static/jenpyroq_diagnostics.svg
+   :alt: Diagram of JenpyROQ output files and diagnostics.
+   :class: jenpyroq-doc-figure
+
 Run Directory
 ~~~~~~~~~~~~~
 
 Before the ROQ object is initialised, the command creates the base output
-directory. Its top-level layout is:
+directory. It contains:
 
-.. code-block:: text
-
-   <output>/
-     JenpyROQ.log
-     git_info.txt
-     <copied config file>
-     ROQ_data/
-       ROQ_metadata.txt
-       full_frequencies.npy
-       linear/
-       quadratic/
-     Plots/
-       Basis_parameters/
-       Waveform_comparisons/
+* ``JenpyROQ.log``;
+* the copied configuration file;
+* ``git_info.txt``;
+* ``ROQ_data/``, including ``ROQ_metadata.txt``, ``full_frequencies.npy`` and
+  the ``linear/`` and ``quadratic/`` array directories;
+* ``Plots/``, including ``Basis_parameters/`` and ``Waveform_comparisons/``.
 
 The config file is copied into the run directory so the stored arrays can be
 traced back to the exact input settings.

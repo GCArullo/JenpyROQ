@@ -1,0 +1,82 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="920" height="430" viewBox="0 0 920 430" role="img" aria-labelledby="title desc">
+  <title id="title">Diagnostic plots</title>
+  <desc id="desc">Illustration of JenpyROQ diagnostic plots: interpolation error, outlier counts, empirical nodes and waveform comparisons.</desc>
+  <defs>
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="130%">
+      <feDropShadow dx="0" dy="5" stdDeviation="6" flood-color="#111820" flood-opacity="0.10"/>
+    </filter>
+  </defs>
+  <rect width="920" height="430" rx="12" fill="#f3f6fb"/>
+  <text x="38" y="48" font-family="Lato, Arial, sans-serif" font-size="24" font-weight="800" fill="#161616">Diagnostic plots</text>
+  <text x="38" y="75" font-family="Lato, Arial, sans-serif" font-size="14" fill="#5f6572">The plots summarize convergence, selected empirical frequencies and waveform reconstruction checks.</text>
+
+  <g font-family="Lato, Arial, sans-serif">
+    <rect x="44" y="104" width="382" height="122" rx="9" fill="#ffffff" stroke="#dde4ef" filter="url(#shadow)"/>
+    <text x="72" y="136" font-size="14" font-weight="800" fill="#00626a">Interpolation error</text>
+    <line x1="80" y1="198" x2="386" y2="198" stroke="#9ba8b5"/>
+    <line x1="80" y1="132" x2="80" y2="198" stroke="#9ba8b5"/>
+    <line x1="80" y1="154" x2="386" y2="154" stroke="#dde4ef" stroke-dasharray="5 5"/>
+    <polyline points="82,188 122,177 162,168 202,158 242,145 282,136 322,127 382,119" fill="none" stroke="#00626a" stroke-width="3"/>
+    <polyline points="82,193 122,184 162,179 202,171 242,162 282,154 322,151 382,145" fill="none" stroke="#d98518" stroke-width="2.4" stroke-dasharray="6 4"/>
+
+    <rect x="494" y="104" width="382" height="122" rx="9" fill="#ffffff" stroke="#dde4ef" filter="url(#shadow)"/>
+    <text x="522" y="136" font-size="14" font-weight="800" fill="#7d3d00">Outlier counts</text>
+    <line x1="530" y1="198" x2="836" y2="198" stroke="#9ba8b5"/>
+    <line x1="530" y1="132" x2="530" y2="198" stroke="#9ba8b5"/>
+    <rect x="562" y="162" width="24" height="36" fill="#d98518"/>
+    <rect x="612" y="144" width="24" height="54" fill="#d98518"/>
+    <rect x="662" y="173" width="24" height="25" fill="#d98518"/>
+    <rect x="712" y="135" width="24" height="63" fill="#d98518"/>
+    <rect x="762" y="184" width="24" height="14" fill="#d98518"/>
+    <rect x="812" y="154" width="24" height="44" fill="#d98518"/>
+
+    <rect x="44" y="264" width="382" height="122" rx="9" fill="#ffffff" stroke="#dde4ef" filter="url(#shadow)"/>
+    <text x="72" y="296" font-size="14" font-weight="800" fill="#2868a9">Empirical nodes</text>
+    <line x1="80" y1="358" x2="386" y2="358" stroke="#9ba8b5"/>
+    <line x1="80" y1="294" x2="80" y2="358" stroke="#9ba8b5"/>
+    <path d="M80 346 C110 326 132 315 158 334 S203 368 230 336 S283 290 320 316 S360 345 386 330" fill="none" stroke="#b6c2cf" stroke-width="2"/>
+    <g stroke="#2868a9" stroke-width="2.4">
+      <line x1="98" y1="358" x2="98" y2="333"/>
+      <line x1="126" y1="358" x2="126" y2="318"/>
+      <line x1="164" y1="358" x2="164" y2="334"/>
+      <line x1="213" y1="358" x2="213" y2="346"/>
+      <line x1="248" y1="358" x2="248" y2="322"/>
+      <line x1="295" y1="358" x2="295" y2="298"/>
+      <line x1="338" y1="358" x2="338" y2="319"/>
+      <line x1="372" y1="358" x2="372" y2="330"/>
+    </g>
+    <g fill="#2868a9">
+      <circle cx="98" cy="333" r="4.5"/>
+      <circle cx="126" cy="318" r="4.5"/>
+      <circle cx="164" cy="334" r="4.5"/>
+      <circle cx="213" cy="346" r="4.5"/>
+      <circle cx="248" cy="322" r="4.5"/>
+      <circle cx="295" cy="298" r="4.5"/>
+      <circle cx="338" cy="319" r="4.5"/>
+      <circle cx="372" cy="330" r="4.5"/>
+    </g>
+
+    <rect x="494" y="264" width="382" height="122" rx="9" fill="#ffffff" stroke="#dde4ef" filter="url(#shadow)"/>
+    <text x="522" y="296" font-size="14" font-weight="800" fill="#2d7a58">Waveform checks</text>
+    <line x1="530" y1="358" x2="836" y2="358" stroke="#9ba8b5"/>
+    <line x1="530" y1="294" x2="530" y2="358" stroke="#9ba8b5"/>
+    <g stroke="#9ebfe2" stroke-width="1.4" stroke-dasharray="4 4">
+      <line x1="558" y1="302" x2="558" y2="358"/>
+      <line x1="602" y1="302" x2="602" y2="358"/>
+      <line x1="654" y1="302" x2="654" y2="358"/>
+      <line x1="718" y1="302" x2="718" y2="358"/>
+      <line x1="776" y1="302" x2="776" y2="358"/>
+      <line x1="818" y1="302" x2="818" y2="358"/>
+    </g>
+    <path d="M530 338 C564 298 598 298 632 338 S702 378 736 338 S802 298 836 338" fill="none" stroke="#2d7a58" stroke-width="3"/>
+    <path d="M530 343 C564 308 598 308 632 343 S702 376 736 343 S802 308 836 343" fill="none" stroke="#00626a" stroke-width="2" stroke-dasharray="6 4"/>
+    <g fill="#2868a9">
+      <circle cx="558" cy="315" r="4.5"/>
+      <circle cx="602" cy="314" r="4.5"/>
+      <circle cx="654" cy="357" r="4.5"/>
+      <circle cx="718" cy="357" r="4.5"/>
+      <circle cx="776" cy="317" r="4.5"/>
+      <circle cx="818" cy="316" r="4.5"/>
+    </g>
+  </g>
+</svg>

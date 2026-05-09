@@ -6,6 +6,15 @@ wrapper classes in ``JenpyROQ/waveform_wrappers.py``. A wrapper is responsible
 for accepting a parameter dictionary and returning ``h_+`` and ``h_x`` on the
 requested frequency grid.
 
+.. rst-class:: jenpyroq-doc-figure-container
+
+.. figure:: _static/jenpyroq_waveform_wrappers.svg
+   :alt: Diagram of the JenpyROQ waveform wrapper interface.
+   :class: jenpyroq-doc-figure
+
+   The ROQ algorithm calls one common wrapper interface while the wrapper
+   handles library-specific waveform generation.
+
 The wrapper contract is:
 
 .. code-block:: python

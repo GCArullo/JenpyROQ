@@ -368,6 +368,27 @@ a:hover,
   max-width: min(650px, 100%);
 }
 
+.rst-content .jenpyroq-doc-figure-container {
+  margin: 1.25rem 0 1.8rem;
+}
+
+.rst-content .jenpyroq-doc-figure-container img,
+.rst-content img.jenpyroq-doc-figure {
+  background: #f3f6fb;
+  border: 1px solid var(--jenpyroq-line);
+  box-shadow: 0 12px 28px rgba(17, 24, 32, 0.06);
+  display: block;
+  width: 100%;
+}
+
+.rst-content .jenpyroq-doc-figure-container figcaption,
+.rst-content .jenpyroq-doc-figure-container .caption {
+  color: var(--jenpyroq-muted);
+  font-size: 0.88rem;
+  line-height: 1.55;
+  margin-top: 0.65rem;
+}
+
 .jenpyroq-quicklinks {
   display: flex;
   flex-wrap: wrap;

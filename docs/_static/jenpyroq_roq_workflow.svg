@@ -1,0 +1,75 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="920" height="470" viewBox="0 0 920 470" role="img" aria-labelledby="title desc">
+  <title id="title">ROQ construction workflow</title>
+  <desc id="desc">Illustration of the JenpyROQ workflow from configuration to basis construction, empirical nodes, ROQ arrays, and diagnostics.</desc>
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="7.5" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L8,3 L0,6 Z" fill="#00626a"/>
+    </marker>
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="130%">
+      <feDropShadow dx="0" dy="5" stdDeviation="6" flood-color="#111820" flood-opacity="0.10"/>
+    </filter>
+  </defs>
+  <rect width="920" height="470" rx="12" fill="#f3f6fb"/>
+  <text x="38" y="48" font-family="Lato, Arial, sans-serif" font-size="24" font-weight="800" fill="#161616">ROQ construction workflow</text>
+  <text x="38" y="75" font-family="Lato, Arial, sans-serif" font-size="14" fill="#5f6572">The run turns a configuration file into empirical nodes, interpolants and diagnostic products.</text>
+
+  <g filter="url(#shadow)" font-family="Lato, Arial, sans-serif">
+    <rect x="38" y="112" width="150" height="82" rx="8" fill="#ffffff" stroke="#dde4ef"/>
+    <text x="62" y="143" font-size="15" font-weight="800" fill="#00626a">Config</text>
+    <text x="62" y="166" font-size="12" fill="#29313d">frequency grid</text>
+    <text x="62" y="183" font-size="12" fill="#29313d">training range</text>
+
+    <rect x="238" y="112" width="150" height="82" rx="8" fill="#ffffff" stroke="#dde4ef"/>
+    <text x="263" y="143" font-size="15" font-weight="800" fill="#00626a">Sample space</text>
+    <text x="263" y="166" font-size="12" fill="#29313d">active parameters</text>
+    <text x="263" y="183" font-size="12" fill="#29313d">random points</text>
+
+    <rect x="438" y="112" width="150" height="82" rx="8" fill="#ffffff" stroke="#dde4ef"/>
+    <text x="464" y="143" font-size="15" font-weight="800" fill="#00626a">Basis growth</text>
+    <text x="464" y="166" font-size="12" fill="#29313d">pre-selection</text>
+    <text x="464" y="183" font-size="12" fill="#29313d">enrichment cycles</text>
+
+    <rect x="638" y="112" width="150" height="82" rx="8" fill="#ffffff" stroke="#dde4ef"/>
+    <text x="662" y="143" font-size="15" font-weight="800" fill="#00626a">Empirical nodes</text>
+    <text x="662" y="166" font-size="12" fill="#29313d">selected frequencies</text>
+    <text x="662" y="183" font-size="12" fill="#29313d">basis interpolant</text>
+  </g>
+
+  <g stroke="#00626a" stroke-width="2.6" fill="none" marker-end="url(#arrow)">
+    <path d="M190 153 H228"/>
+    <path d="M390 153 H428"/>
+    <path d="M590 153 H628"/>
+  </g>
+
+  <g font-family="Lato, Arial, sans-serif">
+    <rect x="314" y="252" width="178" height="92" rx="8" fill="#edf7f8" stroke="#9ed5da"/>
+    <text x="341" y="282" font-size="15" font-weight="800" fill="#073f45">Linear branch</text>
+    <text x="341" y="306" font-size="12" fill="#29313d">basis for h_plus</text>
+    <text x="341" y="324" font-size="12" fill="#29313d">linear ROQ nodes</text>
+
+    <rect x="534" y="252" width="178" height="92" rx="8" fill="#fff4e4" stroke="#efc585"/>
+    <text x="556" y="282" font-size="15" font-weight="800" fill="#7d3d00">Quadratic branch</text>
+    <text x="556" y="306" font-size="12" fill="#29313d">basis for |h_plus|^2</text>
+    <text x="556" y="324" font-size="12" fill="#29313d">quadratic ROQ nodes</text>
+
+    <rect x="386" y="354" width="254" height="54" rx="8" fill="#ffffff" stroke="#dde4ef"/>
+    <text x="513" y="378" font-size="15" font-weight="800" fill="#00626a" text-anchor="middle">Products</text>
+    <text x="513" y="398" font-size="12" fill="#29313d" text-anchor="middle">ROQ_data arrays, plots and metadata</text>
+  </g>
+
+  <g stroke="#00626a" stroke-width="2.4" fill="none">
+    <path d="M513 196 V224"/>
+  </g>
+  <g stroke="#00626a" stroke-width="2.4" fill="none" marker-end="url(#arrow)">
+    <path d="M513 224 C482 232 433 232 403 252"/>
+    <path d="M513 224 C544 232 593 232 623 252"/>
+    <path d="M403 344 C425 354 448 354 470 354"/>
+  </g>
+  <g stroke="#d98518" stroke-width="2.4" fill="none" marker-end="url(#arrow)">
+    <path d="M623 344 C601 354 578 354 556 354"/>
+  </g>
+
+  <g font-family="Lato, Arial, sans-serif" fill="#5f6572" font-size="12">
+    <text x="39" y="442">Basis construction is repeated independently for enabled run types, then validated on random test points.</text>
+  </g>
+</svg>
